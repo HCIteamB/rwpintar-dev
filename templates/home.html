@@ -15,11 +15,14 @@
             hubungan antar warga menjadi
             lebih asyik!</p>
 
+            {% if user.is_authenticated %}
+          {% else %}
           <div class="justify-content-center">
-            <a href="#"><button class="btn btn-outline-success mulai" type="button">Mulai</button></a>
+            <a href="{% url 'login' %}"><button class="btn btn-outline-success mulai" type="button">Mulai</button></a>
             <a href="{% url 'umkm-list' %}"><button class="btn btn-outline-success eksplorasi" type="button">Eksplorasi
                 RW</button></a>
           </div>
+            {% endif %} 
         </div>
       </div>
     </div>
