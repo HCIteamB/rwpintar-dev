@@ -42,7 +42,7 @@ def login(request):
             return redirect("/")
         else:
             messages.error(request, "anda salah memasukkan akun atau akun tidak ada")
-            return redirect('signin')
+            return redirect('login')
 
     return render(request, "signin.html")
 
