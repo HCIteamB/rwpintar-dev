@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Konten Section  -->
+<div class="mt-5 settings-section-content container " data-aos="fade-up">
+  <div class="container-fluid ">
+    <div class="heading">
+      <h2 class="title">My Account</h2>
+      <p class="subtitle">Update your current profile</p>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-12">
+          <form method="POST">
+            {% csrf_token %}
+            <div class="card">
+              <div class="card-body">
+                <div class="row mb-2">
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="id_first_name">Nama Depan</label>
+                      <input type="text" class="form-control" id="id_first_name" aria-describedby="emailHelp"
+                                                                                 name="first_name" value="{{user.first_name}}" </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="id_last_name">Nama Belakang</label>
+                          <input type="text" class="form-control" id="id_last_name" aria-describedby="emailHelp"
+                                                                                    name="last_name" value="{{user.last_name}}" />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="id_nik">NIK</label>
+                          <input type="text" class="form-control" id="id_nik" aria-describedby="emailHelp" name="nik"
+                                                                                                           value="{{user.nik}}" />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="id_date">Tanggal Lahir</label>
+                          <input type="date" class="form-control" id="id_date" aria-describedby="emailHelp" name="date"
+                                                                                                            value="{{user.birth}}" />
+                        </div>
+                      </div>
+
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="id_email">Email</label>
+                          <input type="email" class="form-control" id="id_email" aria-describedby="emailHelp" name="Email"
+                                                                                                              value="{{user.email}}" />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="id_contact">Mobile</label>
+                          <input type="text" class="form-control" id="id_contact" name="contact" value="{{user.contact}}" />
+                        </div>
+                      </div>
+
+                <div class="col">
+                  <div class="form-group">
+                    <label for="id_adress" >Alamat Lengkap</label>
+                    <textarea cols="40" rows="3" type="text" class="form-control" name="Alamat" id="Alamat"
+                      placeholder="Masukkan ALamat">
+                          <input type="text" class="form-control" id="id_adress" name="address" value="{{user.contact}}" />
+                    </textarea>
+                  </div>
+                </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="col text-right">
+                        <input type="submit" class="btn btn-success px-5">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+</script>
+
+{% endblock %}

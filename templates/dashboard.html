@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="shortcut icon" href="../../Files/components/icon-logo.ico" />
+
+  <title>RW Pintar - Dashboard</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="section-navbar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+
+        <a class="navbar-brand logo" href="dashboard.html"><img
+            src="../../Files/components/homepage/Logo-full-transparent.png" alt=""></a>
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse  navbar-konten" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="#features">Fitur</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="umkm.html">UMKM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tentang-kami">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak-kami">Hubungi Kami</a>
+            </li>
+
+          </ul>
+
+          <!-- Desktop -->
+          <ul class="navbar-nav d-none d-lg-flex">
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown">
+                <img src="../../Files/components/user.svg" alt="" class="rounded-circle mr-2 profile-picture" />
+                Hi, {{ user.first_name }}
+              </a>
+              <div class="dropdown-menu">
+                <a href="dashboard.html" class="dropdown-item">Dashboard</a>
+                <a href="settings.html" class="dropdown-item">Settings</a>
+                <div class="dropdown-divider"></div>
+                <a href="home.html" class="dropdown-item">Logout</a>
+              </div>
+            </li>
+
+
+          </ul>
+          <!-- mobile -->
+          <ul class="navbar-nav d-block d-lg-none">
+            <a href="settings.html" class="nav-link">Hi, Hafiz</a>
+            <a href="home.html" class="nav-link">Logout</a>
+          </ul>
+        </div>
+    </div>
+    </nav>
+  </div>
+  </div>
+
+  <div class="dashboard-page">
+    <!-- Hero Section  -->
+    <div class="section-hero">
+      <div class="container ">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 kiri"><img src="../../Files/components/homepage/hero-img.png" alt=""></div>
+          <div class="col-lg-6 col-md-12 kanan">
+            <p>Platform Digital Warga Pintar,
+              dengan fitur melimpah membuat
+              hubungan antar warga menjadi
+              lebih asyik!</p>
+
+            <div class="justify-content-center">
+              <a href="eksplorasi.html"><button class="btn btn-outline-success eksplorasi" type="button">Eksplorasi
+                  RW</button></a>
+              <a href="warga.html"><button class="btn cari-warga ml-3" type="button">Cari Warga</button></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="section-features" id="features">
+      <div class="container">
+        <section class="heading">
+          <div class="row">
+            <div class="col text-center 
+                section-features-heading">
+              <h2>Features</h2>
+              <hr>
+            </div>
+          </div>
+        </section>
+
+        <section class="features-content">
+          <div class="justify-content-center row">
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="konten">
+                <div class="card text-center">
+                  <h1>SISTEM MANAJEMEN RT/RW</h1>
+                  <hr>
+                  <p>Manajemen lengkap bagi pengurus
+                    yang sibuk mulai dari dashboard
+                    informasi , pengelolaan data warga
+                    (pendaftaran dan validasi), histori/
+                    sejarah warga yang pernah tinggal
+                    dalam satu rumah (pemilik/sewa),
+                    pengelolaan kas, pengelolaan
+                    informasi, pengelolaan surat
+                    menyurat mulai dari persetujuan
+                    sampai pembuatan dokumen surat
+                    secara otomatis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="konten">
+                <div class="card text-center">
+                  <h1>BROADCAST INFORMASI</h1>
+                  <hr>
+                  <p>Pengurus maupun warga dapat berbagi
+                    Informasi dalam bentuk gambar maupun
+                    teks terkait lingkungan tempat tinggal
+                    dan bisa berdasarkan preferensi penerima,
+                    contoh: Berita hanya bisa dibaca oleh kaum
+                    perempuan karena terkait berita kegiatan arisan.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="konten">
+                <div class="card text-center">
+                  <h1>DIGITALISASI DOKUMEN</h1>
+                  <hr>
+                  <p>Warga dapat langsung mengajukan
+                    perihal dokumen / surat menyurat
+                    yang diperlukan. Ada proses persetujuan
+                    serta otomatis dokumen akan terbit
+                    dan dapat di-unduh.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="konten">
+                <div class="card text-center">
+                  <h1>CHAT ANTAR WARGA <br> (Rilis
+                    Dalam Waktu Dekat)</h1>
+                  <hr>
+                  <p>Dengan kesibukan warga, terjadinya
+                    fenomena didalam lingkungan satu
+                    warga tidak mengenal warga lainnya.
+                    Fasilitas chat ini berguna untuk
+                    meminimalkan kejadian diatas dalam hal
+                    mengenal warga lainnya melalui fasilitas chat,
+                    tanpa harus tahu nomor pribadi warga yang bersangkutan.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="konten">
+                <div class="card text-center">
+                  <h1>FORUM JUAL BELI <br> ( Rilis
+                    Dalam Waktu Dekat )</h1>
+                  <hr>
+                  <p>Transaksi Jual beli sudah biasa
+                    dilakukan warga ketika acara-acara
+                    offline seperti arisan maupun online
+                    menggunakan Whatsapp group. RWPINTAR
+                    menyediakan forum jual beli yang bisa
+                    secara COD maupun terintegrasi dengan
+                    pembayaran digital.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="konten">
+                <div class="card text-center">
+                  <h1>UMKM <br>( Rilis
+                    Dalam Waktu Dekat )</h1>
+                  <hr>
+                  <p>Warga yang berwirausaha akan sangat mendapatkan manfaat dari
+                    program ini, karena data UMKM yang ada di RW
+                    akan dipublish dan di promosikan keluaar sehingga
+                    dapat dilihat oleh orang banyak, terlebih
+                    jika produk yang dimiliki bagus.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- About us -->
+    <div class="section-about-us" id="tentang-kami">
+      <div class="container">
+
+        <section class="heading">
+          <div class="row">
+            <div class="col text-center 
+                  section-features-heading">
+              <h2>TENTANG KAMI</h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-us-content">
+          <div class="justify-content-center row text-center logo-about">
+            <div class="col">
+              <img src="../../Files/components/homepage/about-hero-logo.png" alt="" srcset="">
+            </div>
+          </div>
+
+          <div class="justify-content-center row ">
+            <div class="col-lg-6 col-sm-12 konten">
+              <h1>VISI</h1>
+              <hr>
+              <ul>
+                <li>- Manajemen lengkap bagi pengurus yang
+                  sibuk mulai dari dashboard.
+                </li>
+                <li>- Pengelolaan data warga (pendaftaran dan
+                  validasi) Informasi.
+                </li>
+
+              </ul>
+            </div>
+            <div class="col-lg-6 col-sm-12 konten">
+              <h1>MISI</h1>
+              <hr>
+              <ul>
+                <li>- Manajemen lengkap bagi pengurus yang
+                  sibuk mulai dari dashboard.
+
+                </li>
+                <li>- Manajemen lengkap bagi pengurus yang
+                  sibuk mulai dari dashboard.
+                </li>
+                <li>- Pengelolaan data warga (pendaftaran dan
+                  validasi) Informasi.
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Kata Mereka -->
+    <div class="section-kata-mereka">
+
+      <section class="heading">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <h2>Apa Kata Mereka?</h2>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section-content" id="katamereka-content">
+        <div class="container">
+          <div class="konten row justify-content-center">
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="card card-katamereka text-center">
+                <div class="katamereka-konten">
+                  <img src="../../Files/components/homepage/gandhi.png" alt="User" class="mb-4 rounded-circle">
+                  <h3 class="mb-4">Mahatma Gandhi</h3>
+                  <p class="quotes">
+                    "Sebuah budaya bangsa
+                    tinggal di hati dan di dalam
+                    jiwa rakyatnya."
+                  </p>
+                  <hr class="hr1">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="card card-katamereka text-center">
+                <div class="katamereka-konten">
+                  <img src="../../Files/components/homepage/kennedy.png" alt="User" class="mb-4 rounded-circle">
+                  <h3 class="mb-4">John F. Kennedy</h3>
+                  <p class="quotes">
+                    "Jika seni bertujuan untuk memelihara
+                    akar dari budaya kita, masyarakat harus
+                    membiarkan seniman bebas mengikuti
+                    visi mereka masing-masing kemanapun
+                    hal itu membawa mereka."
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="card card-katamereka text-center">
+                <div class="katamereka-konten">
+                  <img src="../../Files/components/homepage/iwan-false.png" alt="User" class="mb-4 rounded-circle">
+                  <h3 class="mb-4">Iwan Fals</h3>
+                  <p class="quotes">
+                    "Dari kebudayaan bisa saja kita berbeda
+                    dari agama dan warna kulit bisa juga berbeda,
+                    Seharusnya perbedaan ini tak membuat jadi
+                    berbeda, Kenyataan sudah membuktikan
+                    soal kita sama."
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row button">
+            <div class="col-12 text-center ">
+              <a href="#" class="btn btn-narahubung px-4 mt4 mx-1">
+                Narahubung
+              </a>
+
+              <a href="#" class="btn btn-letStart px-4 mt4 mx-1">
+                Let's Start
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="section-footer mt-5 mb-4" id="kontak-kami">
+    <div class="container pt-5 pb-5">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="row">
+
+            <div class="col-12 col-lg-3">
+              <h5>FEATURES</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Social Media</a></li>
+                <li><a href="#">Affiliate</a></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-lg-3">
+              <h5>ACCOUNT</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Refund</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Reward</a></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-lg-3">
+              <h5>COMPANY</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Media</a></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-lg-3">
+              <h5>GET CONNECTED</h5>
+              <ul class="list-unstyled">
+                <li>Jakarta Pusat</li>
+                <li>Indonesia</li>
+                <li><a href="#">0882-1192-1299</a></li>
+                <li><a href="#">thebetawie@gmail.com</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid copy">
+      <div class="row border-top justify-content-center align-items-lg-center pt-4">
+        <p class="col-auto font-weight-light">
+          2020 Copyright TheBetawie &bull; All rights reserved &bull;
+          Made in Jakarta
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+  <script src="../templates/retina/retina.js"></script>
+
+
+</body>
+
+</html>

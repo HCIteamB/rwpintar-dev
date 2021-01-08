@@ -1,0 +1,5 @@
+static/
+media/
+__pycache__/
+passenger_wsgi.py
+tmp/
