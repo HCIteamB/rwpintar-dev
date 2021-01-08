@@ -53,7 +53,7 @@
         </ul>
         <!-- mobile -->
         <ul class="navbar-nav d-block d-lg-none">
-          <a href="settings.html" class="nav-link">Hi, {{ user.first_name }}</a>
+          <a href="{% url 'setting' %}" class="nav-link">Hi, {{ user.first_name }}</a>
           <a href="{% url 'logout' %}" class="nav-link">Logout</a>
         </ul>
       </div>
